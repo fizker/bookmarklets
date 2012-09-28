@@ -1,0 +1,52 @@
+img {
+	max-width: 100vw;
+	max-height: 100vh;
+	vertical-align: middle;
+	-webkit-transition-property: left, opacity;
+	-webkit-transition-duration: .2s;
+	-webkit-transition-timing-function: linear;
+	transition-property: left, opacity;
+	transition-duration: .2s;
+	transition-timing-function: linear;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.current {
+}
+
+.prev {
+	left: -100vw;
+}
+.next {
+	left: 100vw;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.root {
+	display: none;
+	text-align: center;
+	overflow: hidden;
+}
+:-webkit-full-screen.root {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+}
+
+.loading-views {
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	text-align: middle;
+}
+
+:-webkit-full-screen ~ .loading-views {
+	display: none;
+}
